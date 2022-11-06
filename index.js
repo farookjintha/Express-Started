@@ -9,6 +9,10 @@ const app = express();
 //Connecting DB
 db();
 
+app.get('/', (req, res) =>{
+    res.send('Welcome to my App!');
+})
+
 app.use(express.json()); //middleware
 app.use(userRoutes); //custom middleware
 
